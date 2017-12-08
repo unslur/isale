@@ -1,0 +1,30 @@
+findOutTaskList
+参数pager_offset
+user_code
+task_state 任务状态(1：待处理、2：处理中、3：已完成)
+{
+Code: 1,
+Message: "",
+Data: [
+{
+Task_code: "1011497852575288757",
+Task_type: 1,
+Task_content: "333入库13个",
+Task_state: 3,
+Task_count: "13",
+Task_othercode: "1011496652006386122",
+Wave_code:""1011496652006386122",//波次code，在点击item会用到这个code
+Addtime: "2017-06-19 14:09:35"
+},
+{
+Task_code: "1011497870036119687",
+Task_type: 1,
+Task_content: "aaa入库1个",
+Task_state: 3,
+Task_count: "1",
+Task_othercode: "1011497869822580837",
+Wave_code:""1011496652006386122",
+Addtime: "2017-06-19 19:00:44"
+}
+]
+}

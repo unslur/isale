@@ -1,0 +1,43 @@
+findTaskDetail 根据任务编码查询任务明细
+参数 task_code
+
+
+{
+	Code: 1,
+	Message: "成功",
+	Data: {
+		Task: {
+			Product_imgurl: "images/productimg.png",
+			User_name: "手持机工作人员",
+			User_code: "1011488808517036814",
+			Product_name: "手机壳",
+			Product_unit: "个",
+			Product_bulk: "50000",
+			Product_barcode: "",
+			Product_code: "1011490585766406707",
+			Product_enname: "phone case",
+			Task_count: "10",
+			Task_type: "1",
+			Task_code: "1011497852661557622",
+			Task_othercode: "1011492497274920660"
+		},
+		List: [{
+				Task_code: "1011497852661557622",
+				Task_type: "",
+				Task_content: "",
+				Task_state: "",
+				Task_count: "10",
+				Task_othercode: "",
+				Area_name: "始发仓A区",
+				Space_code: "1011493869873961538",
+				Space_number: "S01-01-01-03",
+				Space_linenumber: "03",
+				Space_usedbulk: "0",
+				Space_leftbulk: "125000000",
+				Space_upbulk: "967181",
+				Addtime: ""
+			}
+		],
+		Count: 0
+	}
+}

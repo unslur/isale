@@ -1,0 +1,49 @@
+查询任务类型
+ip: port/isale/receiveHand/findTaskType
+返回数据：
+code: 1,
+message: "",
+data: {
+	tasklist: [{
+			task_code: "",
+			task_type: 1,
+			task_content: "",
+			task_state: 0,
+			task_count: "",
+			task_othercode: "",
+			addtime: ""
+		}, {
+			task_code: "",
+			task_type: 2,
+			task_content: "",
+			task_state: 0,
+			task_count: "",
+			task_othercode: "",
+			addtime: ""
+		}, {
+			task_code: "",
+			task_type: 3,
+			task_content: "",
+			task_state: 0,
+			task_count: "",
+			task_othercode: "",
+			addtime: ""
+		}, {
+			task_code: "",
+			task_type: 4,
+			task_content: "",
+			task_state: 0,
+			task_count: "",
+			task_othercode: "",
+			addtime: ""
+		}, {
+			task_code: "",
+			task_type: 5,
+			task_content: "",
+			task_state: 0,
+			task_count: "",
+			task_othercode: "",
+			addtime: ""
+		}
+	]
+}

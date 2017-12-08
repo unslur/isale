@@ -1,0 +1,41 @@
+修改审核的订单并提交审核
+updateInorderdetail
+参数传一个key - value
+info = {
+	"Inorderdetail_code": "",
+	"User_code": "",
+	"Product_code": "",
+	"Product_name": "",
+	"Product_enname": "",
+	"Product_barcode": "",
+	"Product_sku":"",
+	"Product_unit":"",
+	"Product_weight":"",
+	"Product_length":"",
+	"Product_width":"",
+	"Product_heigth":"",
+	"Product_bulk":"",
+	"Product_groupstate":,     //整形
+	"Product_batterystate":,   //整形
+	"Product_usercount":    //整形
+}
+
+例子
+s1.natapp.cc:15554/cry/receiveHand/updateInorderdetail&info={
+	"Inorderdetail_code": "",
+	"User_code": "",
+	"Product_code": "",
+	"Product_name": "",
+	"Product_enname": "",
+	"Product_barcode": "",
+	"Product_sku":"",
+	"Product_unit":"",
+	"Product_weight":"",
+	"Product_length":"",
+	"Product_width":"",
+	"Product_heigth":"",
+	"Product_bulk":"",
+	"Product_groupstate":,     //整形
+	"Product_batterystate":,   //整形
+	"Product_usercount":    //整形
+}

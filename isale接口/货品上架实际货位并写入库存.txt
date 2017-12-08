@@ -1,0 +1,14 @@
+saveStorage  货品上架实际货位，并写入库存
+参数
+task_type 任务类型(1：入库、2：出库:3、拣货、4：检验货、5：盘点、)
+task_code 任务系统编码
+task_othercode(入库明细、出库明细)编码
+product_code 货品系统编码
+product_bulk 单个商品体积 
+task_count 数量
+space_code(货位编码)
+返回值 
+{
+	Code: 1,
+	Message: "成功"
+}

@@ -1,0 +1,24 @@
+登录接口
+ip:port/isale/receiveHand/login?user_loginname=work&user_loginpass=123123
+
+返回数据：
+{
+	Code: 1,
+	Message: "",
+	Data: {
+		List: [{
+				User_code: "1011488808517036814",
+				User_loginname: "worker",
+				User_loginpass: "4297f44b13955235245b2497399d7a93",
+				User_type: "2",
+				User_name: "手持机工作人员",
+				User_mobilephone: "13348882923",
+				User_logourl: "images/pic_img.png",
+				User_state: 1,
+				User_rent_price: "0",
+				User_arrearage_price: "0",
+				Company_code: "1001488771295451662"
+			}
+		]
+	}
+}

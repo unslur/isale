@@ -1,0 +1,13 @@
+下载操作接口
+downStorage 
+参数：
+Wavedetailspace_code 波次明细编码
+Space_code 货位编码
+Count 下架数量
+返回
+
+{
+Code:
+Message:
+
+}

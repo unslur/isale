@@ -1,0 +1,12 @@
+updateTaskState
+当单次任务待上架数量完毕时候,更新任务状态
+参数
+
+task_code 任务系统编码
+task_state  任务状态(1：待处理、2：处理中、3：已完成)
+task_othercode (入库明细、出库明细)编码
+返回值 
+{
+	Code: 1,
+	Message: "成功"
+}

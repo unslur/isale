@@ -1,0 +1,41 @@
+findSpaceDetailList 查询已完成上架详细列表
+参数  task_code 
+pager_offset 0 10 20 30 40 整10
+
+{
+	Code: 1,
+	Message: "成功",
+	Data: {
+		List: [{
+				Space_code: "1011493869903942919",
+				Space_halftype: 1,
+				Space_count: "10000",
+				Product_code: "1011490232490237193",
+				Product_name: "444",
+				Product_enname: "444",
+				Product_barcode: "444",
+				Product_sku: "444",
+				Product_unit: "个",
+				Product_weight: "44",
+				Product_length: "44",
+				Product_width: "44",
+				Product_heigth: "44",
+				Product_length_sort: "44",
+				Product_width_sort: "44",
+				Product_heigth_sort: "44",
+				Product_bulk: "85184",
+				Product_imgurl: "images/productimg.png",
+				Product_state: 3,
+				Product_groupstate: 1,
+				Product_batterystate: 1,
+				User_code: "1011488808360385314",
+				User_name: "sell",
+				User_mobilephone: "13222222222",
+				Task_code: "1011493869512991321",
+				Task_type: 1,
+				Task_othercode: "1011493869387913276",
+				Addtime: "2017-05-04 11:56:22"
+			}
+		]
+	}
+}

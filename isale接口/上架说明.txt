@@ -1,0 +1,20 @@
+马哥，刚才那个上架数量的字段是这样的，你在之前已经调用
+http://s1.natapp.cc:15554/isale/receiveHand/findTaskList?task_state=1&user_code=1011488808517036814&task_type=1&pager_offset=0
+
+
+里面的task_count 值，然后使用里面的调用task_othercode字段
+调用下面这个接口，参数就是take_othercode
+
+http://s1.natapp.cc:15554/isale/receiveHand/findTaskMaxCount?task_othercode=1011497870923548712
+
+
+{
+Code: 1,
+Message: "成功",
+Data: {
+Count: 1
+}
+}
+返回的count字段，就是最大能录入的数量，
+
+然后调用savaStorage接口提供的参数task_count这个字段即要小于 最开始页面跳转过来传的的task_count,也要小于 count 字段

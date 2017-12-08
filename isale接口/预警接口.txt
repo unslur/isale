@@ -1,0 +1,38 @@
+﻿
+接口findOtherSpace
+参数Wavedetailspace_code 
+Number 篮子号
+User_code 手持机人员号
+
+
+返回结构体：
+
+{
+Code:int64
+Message: string
+Data:[
+	ID                   string
+	Product_name         string
+	Product_code         string
+	Product_sku          string
+	Wavedetail_count     int64
+	Wavedetail_excount   int64
+	Space_number         string
+	Space_linenumber     string
+	Number               int64
+	Space_code           string
+	Wavedetailspace_code string
+]}
+当code=11是批拣
+将当前wavedetailspace_Code的任务改成已完成(已分拣)，
+显示message
+Data里面可能会有数据
+如果有数据就插入到数据库
+
+当code=12是非批拣
+Data里面不会有数据
+显示message
+将同一个篮子号的任务改成已完成（已分拣）
+
+当code为1时 手持机本地数据库新增data里面的数据,并把message显示出来
+

@@ -1,0 +1,161 @@
+审核订单
+接口
+s1.natapp.cc:15554/isale/receiveHand/getVerifyInorder
+参数
+pager_offset 分页量
+user_code 用户编码
+
+例子
+s1.natapp.cc:15554/isale/receiveHand/getVerifyInorder?pager_offset=0&user_code=1011488808360385314000000
+
+返回
+{
+    "Code": 1,
+    "Message": "成功",
+    "Data": [
+        {
+            "Inorder_code": "3001501559251073750127545",
+            "Inorder_remark": "",
+            "Inorder_state": 0,
+            "Inorder_mode": 1,
+            "Inorder_type": 0,
+            "User_code": "1011488808360385314000000",
+            "User_name": "sell",
+            "User_mobilephone": "13222222222",
+            "InorderDetail": [
+                {
+                    "Inorderdetail_code": "3011501559251239403534367",
+                    "Inorderdetail_state": 0,
+                    "Inorderdetail_halftype": 0,
+                    "Inorderdetail_selectuserstate": 0,
+                    "Inorderdetail_printstate": 0,
+                    "Inorder_code": "3001501559251073750127545",
+                    "Inorder_mode": 0,
+                    "Operate_user_code": "",
+                    "User_code": "1011488808360385314000000",
+                    "User_name": "sell",
+                    "User_mobilephone": "13222222222",
+                    "Product_code": "2001501559243728860171851",
+                    "Product_name": "cs",
+                    "Product_enname": "",
+                    "Product_barcode": "cscs",
+                    "Product_sku": "cscs",
+                    "Product_unit": "个",
+                    "Product_weight": "1",
+                    "Product_length": "1",
+                    "Product_width": "1",
+                    "Product_heigth": "1",
+                    "Product_length_sort": "",
+                    "Product_width_sort": "",
+                    "Product_heigth_sort": "",
+                    "Product_bulk": "1",
+                    "Product_imgurl": "",
+                    "Product_state": 3,
+                    "Product_groupstate": 11,
+                    "Product_batterystate": 1,
+                    "Product_usercount": "1",
+                    "Product_count": 11,
+                    "Product_totalweight": "11",
+                    "Product_totalbulk": "",
+                    "Addtime": ""
+                }
+            ]
+        }
+    ]
+}
+如果子单里面
+Product_state等于1和Product_state等于2
+跳转的页面显示 
+
+Product_name中文名称
+Product_enname英文名称
+Product_sku	编码
+Product_barcode	条码
+Product_unit	单位
+Product_weight	重量(Kg)
+Product_bulk 货品总体积 Product_length 长 Product_heigth 宽 Product_heigth 高
+Product_batterystate 是否带电池 
+User_name 货主姓名
+User_mobilephone 货主电话
+以上信息均可被修改
+
+除了Product_batterystate字段为勾选 其余均为字符串 其中长宽高 为整数，货品总体积在页面上实时计算   货主电话为正则判断下
+有两个按钮 一个为"提交入库" 一个为"取消订单"
+
+此处还有一个输入文本框 输入实际货品数量
+
+提交入库访问接口  updateInorderdetail  
+
+
+			修改审核的订单并提交审核
+			updateInorderdetail
+			参数传一个key - value
+			info = {
+				"Inorderdetail_code": "",
+				"User_code": "",
+				"Product_code": "",
+				"Product_name": "",
+				"Product_enname": "",
+				"Product_barcode": "",
+				"Product_sku":"",
+				"Product_unit":"",
+				"Product_weight":"",
+				"Product_length":"",
+				"Product_width":"",
+				"Product_heigth":"",
+				"Product_bulk":"",
+				"Product_groupstate":,     //整形
+				"Product_batterystate":,   //整形
+				"Product_usercount":    //整形
+			}
+
+			例子
+			s1.natapp.cc:15554/cry/receiveHand/updateInorderdetail&info={
+				"Inorderdetail_code": "",
+				"User_code": "",
+				"Product_code": "",
+				"Product_name": "",
+				"Product_enname": "",
+				"Product_barcode": "",
+				"Product_sku":"",
+				"Product_unit":"",
+				"Product_weight":"",
+				"Product_length":"",
+				"Product_width":"",
+				"Product_heigth":"",
+				"Product_bulk":"",
+				"Product_groupstate":,     //整形
+				"Product_batterystate":,   //整形
+				"Product_usercount":    //整形
+			}
+
+
+
+取消订单访问 cancleInOrderDetail
+
+			参数
+			inorderdetail_code 子订单号
+			user_code 手持机操作人员的user_code
+			返回{
+			Code：
+			Message:
+			}
+
+
+
+
+Product_state等于3
+
+跳转的页面上显示Product_sku（商品SKU）  Product_usercount（货品数量） Addtime （下单时间）
+
+此处还有一个输入文本框 输入实际货品数量
+请求接口verifyInorder
+		参数
+		inorderdetail_code 子订单号
+		user_code 手持机操作人员的user_code
+		product_count 输入的实际货品数量
+		返回{
+			Code：
+			Message:
+			}
+
