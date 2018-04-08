@@ -386,6 +386,7 @@ WHERE inorderdetail_code='%s'
 		if strings.Contains(err.Error(), "sql: no rows in result set") {
 			rtn.Message = "没有查询到任务信息"
 		} else {
+			DebugLog.Println(err.Error())
 			rtn.Message = "查询异常"
 		}
 		DebugLog.Println(rtn)

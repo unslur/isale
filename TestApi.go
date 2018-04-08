@@ -275,3 +275,21 @@ func IsaleTestApi4(w http.ResponseWriter, r *http.Request) {
 
 	return
 }
+func checkExt(w http.ResponseWriter, r *http.Request) {
+	InfoLog.Println("==========================验证开始：", r.URL)
+	defer InfoLog.Println("==========================验证结束")
+	r.ParseForm()
+	InfoLog.Println(r.Form)
+	key, found1 := r.Form["key"]
+	result := "true"
+	if !found1 {
+		result = "false"
+	}
+	if key[0] != "cyy" {
+		result = "false"
+	}
+
+	fmt.Fprint(w, string(result))
+
+	return
+}

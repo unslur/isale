@@ -562,7 +562,7 @@ ORDER BY
 						// 	fmt.Fprint(w, string(bytes))
 						// 	return
 						// }
-						rtn.Data.PackAddr = "请放在规定位置"
+						rtn.Data.PackAddr = "分销换标签任务，请放到待上架区域等待重新上架"
 					}
 					rtn.Data.List = listDetail
 				} else {

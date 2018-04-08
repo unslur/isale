@@ -178,6 +178,7 @@ func RunServer() {
 	http.HandleFunc(prefix+"/testapione2", IsaleTestApi2)
 	http.HandleFunc(prefix+"/testapione3", IsaleTestApi3)
 	http.HandleFunc(prefix+"/testapione4", IsaleTestApi4)
+	http.HandleFunc(prefix+"/checkExt", checkExt)
 
 	server := &http.Server{
 		Addr:         Server_port,
